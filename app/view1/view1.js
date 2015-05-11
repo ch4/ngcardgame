@@ -10,10 +10,10 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope', function($scope) {
-      //var suits = ['Clubs','Spades','Hearts','Diamonds'];
-      //var numbers = ['Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King','Ace']
-      var suits = ['Clubs','Spades'];
-      var numbers = ['Two','Three'];
+      var suits = ['Clubs','Spades','Hearts','Diamonds'];
+      var numbers = ['Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Jack','Queen','King','Ace']
+      //var suits = ['Clubs','Spades'];
+      //var numbers = ['Two','Three'];
       var deck = [];
       $scope.board = [];
 
