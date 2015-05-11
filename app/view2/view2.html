@@ -1,5 +1,22 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div>Turn: {{isHumanTurn ? "human" : "computer"}}</div>
+<div>
+    <p>Matches: {{matchedPairs[0].length}}</p>
+    <span ng-repeat="pair in matchedPairs[0]">
+        {{pair[0].number}} of {{pair[0].suit}} and {{pair[1].number}} of {{pair[1].suit}}<br>
+    </span>
+</div>
+<div>
+    <p>Computer Matches: {{matchedPairs[1].length}}</p>
+    <span ng-repeat="pair in matchedPairs[1]">
+        {{pair[0].number}} of {{pair[0].suit}} and {{pair[1].number}} of {{pair[1].suit}}<br>
+    </span>
+</div>
+
+<div>
+    <span ng-repeat="card in board">
+        <button class="btn btn-info" style="width:150px;height:150px" ng-click="pickCard($index)" ng-disabled="card.status == 'disabled'">
+            <!--{{card.number}} of {{card.suit}}-->
+            {{card.status == "disabled" ? card.number + " of " + card.suit : "?"}}
+        </button>
+    </span>
+</div>
